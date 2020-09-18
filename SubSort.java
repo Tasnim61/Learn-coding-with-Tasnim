@@ -9,7 +9,7 @@ Input: 1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19
 Output: ((3, 9)
 // 1 3 5 7 9 3 5 6 7 9
 
-Solution Explained:
+Solution:
 1. Find the portion of unsorted array
     a. check from left to right of the array to get end_left index before unsorted array
     b. Similarly check from right to left to get start_righ index before unsorted array
@@ -18,8 +18,8 @@ Solution Explained:
                                     end_left                right_start
 2.                                      
     a. Get Max and Min from End(left) to start(right)
-    b. Now from left sorted array, find the first element which is > min(unsorted array) / shrink left
-    c. Now from right sorted array, find the last element which is < max(unsorted array) /shrink right
+    b. Now from left sorted array, find the first element which is > min / shrink left until get <= min 
+    c. Now from right sorted array, find the last element which is < max /shrink right until get >= max 
 
 Time Complexity: O(N) where N is size of array
 
